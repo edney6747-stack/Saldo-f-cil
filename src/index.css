@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-income: #98FB98; /* Mint Green */
+  --color-expense: #FFA07A; /* Soft Orange */
+  --color-alert: #F08080;   /* Soft Coral Red */
+  --color-surface: #F5F5DC; /* Soft Beige */
+  --color-ink: #333333;    /* Dark Gray */
+  --color-secondary: #87CEEB; /* Light Blue */
+  --color-accent: #C8A2C8;  /* Soft Lilac */
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-semibold transition-all active:scale-95 disabled:opacity-50;
+  }
+}
